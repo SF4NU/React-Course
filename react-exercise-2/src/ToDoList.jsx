@@ -6,7 +6,7 @@ function ToDoList() {
   function handleAddTask() {
     const newTask = document.getElementById("taskInput").value;
     document.getElementById("taskInput").value = "";
-    if (newTask !== "") {
+    if (newTask.trim() !== "") {
       setTask((t) => [...task, newTask]);
     }
   }
@@ -22,6 +22,24 @@ function ToDoList() {
     setTask((t) => newTask);
   }
 
+  /*function moveUp(index) {
+    if (index > 0) {
+      const updatedTasks = [...task];
+      [updatedTasks[index], updatedTasks[index - 1]] = 
+      updatedTasks[[index-1], updatedTasks[index]];
+      setTask(updatedTasks);
+    }
+  }*/
+
+  /*function moveDown(index) {
+    if (index < task.length - 1) {
+      const updatedTasks = [...task];
+      [updatedTasks[index], updatedTasks[index + 1]] = 
+      updatedTasks[[index + 1], updatedTasks[index]];
+      setTask(updatedTasks);
+    }
+  }*/
+  
   return (
     <div className="todo-container" id="todo-container">
       <h1>To-Do-List</h1>
@@ -33,7 +51,7 @@ function ToDoList() {
       </div>
       <div className="new-div">
         {task.map((task, index) => (
-          <div className="new-task-div" key={index}>
+          <div className="new-task-div" key={Math.random()}>
             <div className="task-div">{task}</div>
             <div className="buttons-div">
               <button
