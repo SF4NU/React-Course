@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(48, 48, 48);
+  font-family: monospace, Arial;
+  margin: 0;
+}
+.main-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stopwatch-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  border: 3px solid rgb(199, 199, 199);
+  padding-top: 25px;
+  padding-bottom: 45px;
+  width: 450px;
+  border-radius: 60px;
+}
+.time {
+  color: white;
+  font-size: 5rem;
+}
+.buttons-div {
+  display: flex;
+  column-gap: 10px;
+}
+.buttons-div button {
+  padding: 5px 28px;
+  font-size: 18pt;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.start-button {
+  background-color: rgb(42, 168, 42);
+}
+.stop-button {
+  background-color: red;
+}
+.reset-button {
+  background-color: rgb(17, 143, 216);
+}
+.buttons-div button:hover {
+  opacity: 0.8;
+}
+.buttons-div button:active {
+  transform: translate(2px, 2px);
+  opacity: 0.9;
+}
