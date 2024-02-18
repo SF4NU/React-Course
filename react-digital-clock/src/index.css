@@ -1,0 +1,29 @@
+body {
+  background-image: url(assets/astratto-sfondo-viola-gradiente-transizione-ai-generativa.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+
+  /*OPTIONAL*/
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock-container {
+  backdrop-filter: blur(4px);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+.clock {
+  color: white;
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: monospace;
+  text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.75)
+}
